@@ -1,0 +1,5 @@
+export { default as Title } from './Title'
+export { default as Header } from './Header'
+export { default as LocaleSwitcher } from './LocaleSwitcher'
+export { default as Contact } from './Contact'
+export { default as Link } from './Link'
