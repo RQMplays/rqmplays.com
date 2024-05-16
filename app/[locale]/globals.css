@@ -1,0 +1,24 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b2853;
+  color: #04c4ca;
+}
+
+a {
+  color: #04c4ca;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

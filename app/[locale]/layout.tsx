@@ -1,10 +1,9 @@
+import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Header from '@/app/components/Header'
+import { Header } from '@/app/components'
 import { getMessages } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
-
-const inter = Inter({ subsets: ['latin'] })
+import { quicksand } from '@/app/fonts'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,7 +21,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
+      <body className={quicksand.className}>
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}

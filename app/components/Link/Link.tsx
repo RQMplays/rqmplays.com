@@ -5,13 +5,19 @@ export default function Link({
   children,
   href,
   target,
+  className,
 }: {
   children: React.ReactNode
+  className: string | undefined
   href: string
   target: string | undefined
 }) {
   return (
-    <NativeLink className={styles.link} href={href} target={target}>
+    <NativeLink
+      className={`${styles.link} ${className}`}
+      href={href}
+      target={target}
+    >
       {children}
     </NativeLink>
   )

@@ -1,0 +1,65 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 100px;
+}
+
+.intro {
+  padding-top: 12rem;
+  font-stretch: expanded;
+  font-size: 2rem;
+}
+
+.hi {
+  color: #e2a099;
+  display: inline;
+  font-size: 9rem;
+  font-weight: 900;
+}
+
+.name {
+  display: inline;
+
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.nickname {
+  color: #f3ce75;
+  display: inline;
+  font-size: 9rem;
+  font-weight: 900;
+}
+
+.paragraphs {
+  display: grid;
+  gap: 1rem;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.one {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.two {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.three {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.four {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.five {
+  grid-column: 1;
+  grid-row: 5;
+}

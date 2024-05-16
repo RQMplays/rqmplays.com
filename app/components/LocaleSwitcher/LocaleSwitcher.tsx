@@ -1,5 +1,6 @@
 'use client'
 
+import styles from './LocaleSwitcher.module.css'
 import { useLocale, useTranslations } from 'next-intl'
 import { locales, usePathname, useRouter } from '@/navigation'
 import { ChangeEvent, useTransition } from 'react'
@@ -19,6 +20,7 @@ export default function LocaleSwitcher() {
 
   return (
     <select
+      className={styles.select}
       defaultValue={currentLocale}
       disabled={isPending}
       onChange={onChange}

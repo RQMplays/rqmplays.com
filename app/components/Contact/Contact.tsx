@@ -1,3 +1,4 @@
+import styles from './Contact.module.css'
 import { Link } from '@/app/components'
 
 export default function Contact({
@@ -8,7 +9,7 @@ export default function Contact({
   href: string
 }) {
   return (
-    <Link href={href} target="_blank">
+    <Link className={styles.contact} href={href} target="_blank">
       {children}
     </Link>
   )
