@@ -1,5 +1,23 @@
+:root {
+  /* Blue synthwave theme */
+  --background-color: #1b2853;
+  --secondary-dark: #13477d;
+  --text: #04c4ca;
+  --main-highlight: #f3ce75;
+  --second-highlight: #e2a099;
+
+  /* Black IDE theme */
+  /* --background-color: #181818;
+  --text: #679ad1;
+  --main-highlight: #dcdcaf;
+  --second-highlight: #c5947c; */
+
+  --diagonal-offset: 10rem;
+}
+
 html,
 body {
+  overscroll-behavior-y: none;
   padding: 0;
   margin: 0;
 }
@@ -9,12 +27,24 @@ body {
 }
 
 body {
-  background-color: #1b2853;
-  color: #04c4ca;
+  /* background-color: var(--background-color); */
+}
+
+body {
+  color: var(--text);
+  background: linear-gradient(
+    -30deg,
+    var(--main-highlight) 0%,
+    var(--secondary-dark) 20%,
+    var(--background-color) 40%,
+    var(--second-highlight) 70%,
+    var(--secondary-dark) 90%,
+    var(--background-color) 100%
+  );
 }
 
 a {
-  color: #04c4ca;
+  color: var(--text);
   text-decoration: none;
 }
 

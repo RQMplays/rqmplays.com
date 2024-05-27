@@ -1,93 +1,129 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-  padding: 6rem 0;
+  padding-top: 9rem;
 }
 
 .intro {
-  padding-top: 12rem;
+  padding: 12rem 6rem;
   font-stretch: expanded;
   font-size: 2rem;
-  padding-left: 6rem;
-  padding-right: 6rem;
 }
 
-.red {
+.primary {
   display: inline;
-  color: #e2a099;
+  color: var(--main-highlight);
 }
 
-.yellow {
+.secondary {
   display: inline;
-  color: #f3ce75;
+  color: var(--second-highlight);
 }
 
 .hi {
-  color: #e2a099;
-  display: inline;
+  position: relative;
+  z-index: -1;
+  color: var(--second-highlight);
+  display: inline-block;
   font-size: 9rem;
   font-weight: 900;
+  animation: hi linear;
+  animation-timeline: view(0% 70%);
+}
+
+@keyframes hi {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -100%);
+  }
 }
 
 .name {
-  display: inline;
-
+  position: relative;
+  display: inline-block;
+  z-index: -1;
   font-size: 5rem;
   font-weight: 900;
+  animation: name linear;
+  animation-timeline: view(0% 70%);
+}
+
+@keyframes name {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -40%);
+  }
 }
 
 .nickname {
-  color: #f3ce75;
-  display: inline;
+  position: relative;
+  color: var(--main-highlight);
+  display: inline-block;
   font-size: 9rem;
   font-weight: 900;
+  animation: nickname linear;
+  animation-timeline: view(0% 60%);
+  opacity: 1;
+}
+
+@keyframes nickname {
+  from {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    transform: translate(0, 300%);
+    opacity: 0;
+  }
 }
 
 .container {
   position: relative;
-  height: 100vh;
+  height: 150vh;
+}
+
+.main > .container:not(:first-child) {
+  margin-top: calc(-1 * var(--diagonal-offset));
+}
+
+.main > .container:last-child > .image {
+  clip-path: polygon(0% var(--diagonal-offset), 100% 0%, 100% 100%, 0% 100%);
 }
 
 .image {
   z-index: -1;
-  opacity: 0;
+  opacity: 0.7;
   object-fit: cover;
-  object-position: center;
-  animation: fade-in linear forwards;
-  animation-timeline: view();
-  animation-range: 2rem;
-  filter: grayscale(80%);
-  mask-image: radial-gradient(black 0%, transparent 70%);
+  object-position: 50% 100%;
+  filter: grayscale(100%);
+  /* mask-image: radial-gradient(black 0%, transparent 70%); */
+  clip-path: polygon(
+    0% var(--diagonal-offset),
+    100% 0%,
+    100% calc(100% - var(--diagonal-offset)),
+    0% 100%
+  );
+  /* transform: translate(0, -20em); */
+  animation: linear fade-in forwards;
+  animation-timeline: view(20%);
 }
 
 .paragraph {
   position: absolute;
   z-index: -1;
   right: 10vw;
-  top: 30vh;
+  bottom: 50vh;
   max-width: 30vw;
   font-size: 1.5rem;
   line-height: 2;
-  /* animation: text linear forwards;
-  animation-timeline: view();
-  animation-range: 2rem;
-  transform: translate(0, 40%); */
 }
-
-/* .paragraphs {
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-  gap: 1rem;
-  font-size: 1.5rem;
-  line-height: 2;
-}
-
-.one {
-  height: 100vh;
-  grid-column: 4;
-  grid-row: 1;
-} */
 
 @keyframes text {
   from {
@@ -100,53 +136,11 @@
 
 @keyframes fade-in {
   from {
-    opacity: 0;
-    transform: translate(0, -60%);
-  }
-  50% {
-    opacity: 0.5;
+    object-position: 50% 100%;
+    /* transform: translate(0, -20em); */
   }
   to {
-    opacity: 0;
-    transform: translate(0, 40%);
+    object-position: 50% 0%;
+    /* transform: translate(0, 20em); */
   }
 }
-
-/* .uxImageContainer {
-  position: relative;
-  grid-column: 1 / 6;
-  grid-row: 1;
-} */
-
-/* .uxImage {
-  position: relative;
-  z-index: -1;
-  opacity: 0;
-  object-fit: cover;
-  object-position: center;
-  animation: fade-in linear forwards;
-  animation-timeline: view();
-  animation-range: 6rem;
-  transform: translate(0, -25%);
-  mask-image: radial-gradient(black 0%, transparent 70%);
-} */
-
-/* .two {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.three {
-  grid-column: 3;
-  grid-row: 3;
-}
-
-.four {
-  grid-column: 1;
-  grid-row: 4;
-}
-
-.five {
-  grid-column: 3;
-  grid-row: 5;
-} */
