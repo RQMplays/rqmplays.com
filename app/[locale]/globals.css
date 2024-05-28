@@ -1,22 +1,23 @@
 :root {
   /* Blue synthwave theme */
-  --background-color: #1b2853;
+  /* --background-color: #1b2853; */
   --secondary-dark: #13477d;
   --text: #04c4ca;
-  --main-highlight: #f3ce75;
-  --second-highlight: #e2a099;
+  /* --main-highlight: #f3ce75; */
+  /* --second-highlight: #e2a099; */
 
   /* Black IDE theme */
-  /* --background-color: #181818;
+  --background-color: #181818;
   --text: #679ad1;
   --main-highlight: #dcdcaf;
-  --second-highlight: #c5947c; */
+  --second-highlight: #c5947c;
 
   --diagonal-offset: 10rem;
 }
 
 html,
 body {
+  scroll-behavior: smooth;
   overscroll-behavior-y: none;
   padding: 0;
   margin: 0;
@@ -24,10 +25,6 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  /* background-color: var(--background-color); */
 }
 
 body {

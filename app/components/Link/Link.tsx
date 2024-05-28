@@ -8,9 +8,9 @@ export default function Link({
   className,
 }: {
   children: React.ReactNode
-  className: string | undefined
+  className?: string
   href: string
-  target: string | undefined
+  target?: string
 }) {
   return (
     <NativeLink

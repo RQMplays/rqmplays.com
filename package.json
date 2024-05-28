@@ -10,6 +10,11 @@
     "format": "prettier --log-level warn --write \"./**/*.{jsx,js,ts,tsx,mjs,json}\""
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "eslint-config-prettier": "^9.1.0",
     "next": "14.2.3",
     "next-intl": "^3.14.0",

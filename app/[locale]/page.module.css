@@ -5,9 +5,87 @@
 }
 
 .intro {
+  position: relative;
   padding: 12rem 6rem;
   font-stretch: expanded;
   font-size: 2rem;
+}
+
+.moonWrapper {
+  /* background-color: green; */
+  position: absolute;
+  z-index: -2000;
+  opacity: 0.4;
+  left: 62vw;
+  top: 10vh;
+  /* transform: translateX(-100%); */
+  /* animation: moonWrapper 2s cubic-bezier(0.83, 0.83, 0.57, 1) forwards; */
+}
+
+@keyframes moonWrapper {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(70vw);
+  }
+}
+
+.moon {
+  z-index: -1000;
+  /* filter: grayscale(100); */
+  /* transform: translateY(0); */
+  /* animation: moon 2s linear forwards; */
+}
+
+@keyframes moon {
+  from {
+    transform: translateY(300%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(300%);
+  }
+}
+
+.cloud1 {
+  /* transform: translateY(0); */
+  /* animation: cloud1 linear; */
+  /* animation-timeline: view(); */
+}
+
+@keyframes cloud1 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.outro {
+  position: absolute;
+  padding: 12rem 6rem;
+  /* right: 10vw; */
+  bottom: 0;
+  /* max-width: 30vw; */
+}
+
+.connect {
+  color: var(--second-highlight);
+  font-size: 7rem;
+  font-weight: 900;
+  /* font-stretch: expanded; */
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2rem;
+  /* font-weight: 100; */
 }
 
 .primary {
@@ -84,13 +162,14 @@
   }
 }
 
-.container {
+.firstContainer {
   position: relative;
-  height: 150vh;
 }
 
-.main > .container:not(:first-child) {
+.container {
   margin-top: calc(-1 * var(--diagonal-offset));
+  position: relative;
+  height: 150vh;
 }
 
 .main > .container:last-child > .image {
@@ -98,7 +177,7 @@
 }
 
 .image {
-  z-index: -1;
+  z-index: -10;
   opacity: 0.7;
   object-fit: cover;
   object-position: 50% 100%;
@@ -137,10 +216,8 @@
 @keyframes fade-in {
   from {
     object-position: 50% 100%;
-    /* transform: translate(0, -20em); */
   }
   to {
     object-position: 50% 0%;
-    /* transform: translate(0, 20em); */
   }
 }

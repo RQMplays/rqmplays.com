@@ -1,4 +1,5 @@
 .link {
+  z-index: 1000;
   text-decoration: none;
   transition: color 100ms linear;
 }
