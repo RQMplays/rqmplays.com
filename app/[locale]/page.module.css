@@ -15,7 +15,7 @@
   /* background-color: green; */
   position: absolute;
   z-index: -2000;
-  opacity: 0.4;
+  opacity: 0.2;
   left: 62vw;
   top: 10vh;
   /* transform: translateX(-100%); */
@@ -50,7 +50,8 @@
   }
 }
 
-.cloud1 {
+.clouds {
+  opacity: 0.2 !important;
   /* transform: translateY(0); */
   /* animation: cloud1 linear; */
   /* animation-timeline: view(); */
@@ -178,7 +179,7 @@
 
 .image {
   z-index: -10;
-  opacity: 0.7;
+  opacity: 0.5;
   object-fit: cover;
   object-position: 50% 100%;
   filter: grayscale(100%);
@@ -196,6 +197,11 @@
 
 .paragraph {
   position: absolute;
+  backdrop-filter: blur(10px) brightness(0.85);
+  /* background-color: var(--secondary-dark); */
+  /* backdrop-filter: opacity(0.2); */
+  border-radius: 1.5em;
+  padding: 1em;
   z-index: -1;
   right: 10vw;
   bottom: 50vh;

@@ -15,6 +15,7 @@ import mountFg from '@/public/mountFg.webp'
 import moon from '@/public/moon4.png'
 import { useTranslations } from 'next-intl'
 import { ContactLink } from '@/app/components'
+import { playfair_display } from '@/app/fonts'
 
 import {
   faLinkedinIn,
@@ -44,36 +45,50 @@ export default function Home() {
           />
         </div>
         <Image
-          className={`${styles.image} ${styles.cloud1}`}
+          className={`${styles.clouds} ${styles.image}`}
           src={cloud1}
           alt="cloud1"
           fill
         />
         <Image
-          className={`${styles.image} ${styles.cloud2}`}
+          className={`${styles.clouds} ${styles.image}`}
           src={cloud2}
           alt="cloud2"
           fill
         />
         <Image
-          className={`${styles.image} ${styles.cloud3}`}
+          className={`${styles.clouds} ${styles.image}`}
           src={cloud3}
           alt="cloud3"
           fill
         />
         <div className={styles.intro}>
-          <div className={styles.hi}>Coucou toi !</div> moi c'est{' '}
-          <div className={styles.name}>Benoit</div>, mais tu me retrouvera sur
-          la toile sous le pseudonyme de{' '}
-          <div className={styles.nickname}>RQM.</div>
+          <div className={`${styles.hi} ${playfair_display.className}`}>
+            Coucou toi !
+          </div>{' '}
+          moi c'est{' '}
+          <div className={`${styles.name} ${playfair_display.className}`}>
+            Benoit
+          </div>
+          , mais tu me retrouvera sur la toile sous le pseudonyme de{' '}
+          <div className={`${styles.nickname} ${playfair_display.className}`}>
+            RQM.
+          </div>
         </div>
       </div>
       <div className={styles.container}>
         <Image className={styles.image} src={ux} alt="ux" fill />
         <div className={styles.paragraph}>
           Je suis un développeur web front-end avec une grande sensibilité pour
-          l'<div className={styles.secondary}>UX</div> et le{' '}
-          <div className={styles.primary}>design</div> en général.
+          l'
+          <div className={`${styles.secondary} ${playfair_display.className}`}>
+            UX
+          </div>{' '}
+          et le{' '}
+          <div className={`${styles.primary} ${playfair_display.className}`}>
+            design
+          </div>{' '}
+          en général.
         </div>
       </div>
       <div className={styles.container}>
@@ -81,14 +96,20 @@ export default function Home() {
         <div className={styles.paragraph}>
           Issu d'un parcours attypique, j'ai tout de suite été tres attiré par
           le design et particulièrement le design d'
-          <div className={styles.secondary}>espace</div>.
+          <div className={`${styles.secondary} ${playfair_display.className}`}>
+            espace
+          </div>
+          .
         </div>
       </div>
       <div className={styles.container}>
         <Image className={styles.image} src={spectacle} alt="spectacle" fill />
         <div className={styles.paragraph}>
           Ni trouvant pas assez de fantaisie j'ai commencé à étudier les arts du{' '}
-          <div className={styles.primary}>spectacle</div>, théatre et cinéma.
+          <div className={`${styles.primary} ${playfair_display.className}`}>
+            spectacle
+          </div>
+          , théatre et cinéma.
         </div>
       </div>
       <div className={styles.container}>
@@ -96,7 +117,10 @@ export default function Home() {
         <div className={styles.paragraph}>
           C'est la que la musique est entré dans ma vie, j'ai alors étudié la
           sonorisation de spectacles vivants, et notamment de{' '}
-          <div className={styles.secondary}>concerts</div>.
+          <div className={`${styles.secondary} ${playfair_display.className}`}>
+            concerts
+          </div>
+          .
         </div>
       </div>
       <div className={styles.container}>
@@ -104,14 +128,18 @@ export default function Home() {
         <div className={styles.paragraph}>
           Prenant gout au défi technique, je me suis découvert une passion pour
           le développement web, et spécialement le{' '}
-          <div className={styles.primary}>front-end</div> pour ce savant mélange
-          entre techniques et artistiques.
+          <div className={`${styles.primary} ${playfair_display.className}`}>
+            front-end
+          </div>{' '}
+          pour ce savant mélange entre techniques et artistiques.
         </div>
       </div>
       <div className={styles.container}>
         <Image className={styles.image} src={connect} alt="connect" fill />
         <div className={styles.outro}>
-          <div className={styles.connect}>Restons connecté</div>
+          <div className={`${styles.connect} ${playfair_display.className}`}>
+            Restons connecté
+          </div>
           <div className={styles.contact} id="contact">
             <ContactLink
               href="https://www.linkedin.com/in/benoit-rqm-laurent/"
