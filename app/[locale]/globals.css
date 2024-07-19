@@ -2,6 +2,7 @@
   /* Blue synthwave theme */
   --background-color: #1b2853;
   --secondary-dark: #13477d;
+  --secondary-dark-transparent: rgba(19, 71, 125, 0.6);
   --text: #04c4ca;
   --main-highlight: #f3ce75;
   --second-highlight: #e2a099;

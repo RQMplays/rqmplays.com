@@ -14,7 +14,7 @@ import mountMg from '@/public/mountMg.webp'
 import mountFg from '@/public/mountFg.webp'
 import moon from '@/public/moon4.png'
 import { useTranslations } from 'next-intl'
-import { ContactLink } from '@/app/components'
+import { ContactLink, Link } from '@/app/components'
 import { playfair_display } from '@/app/fonts'
 
 import {
@@ -79,59 +79,80 @@ export default function Home() {
       <div className={styles.container}>
         <Image className={styles.image} src={ux} alt="ux" fill />
         <div className={styles.paragraph}>
-          Je suis un développeur web front-end avec une grande sensibilité pour
-          l'
-          <div className={`${styles.secondary} ${playfair_display.className}`}>
-            UX
-          </div>{' '}
-          et le{' '}
-          <div className={`${styles.primary} ${playfair_display.className}`}>
-            design
-          </div>{' '}
-          en général.
+          <div>
+            Je suis un développeur web front-end avec une grande sensibilité
+            pour l'
+            <div
+              className={`${styles.secondary} ${playfair_display.className}`}
+            >
+              UX
+            </div>{' '}
+            et le{' '}
+            <div className={`${styles.primary} ${playfair_display.className}`}>
+              design
+            </div>{' '}
+            en général.
+          </div>
+          <div>découvrir mon expérience en tant que</div>
+          <Link href="/dev" className={styles.button}>
+            Developpeur
+          </Link>
         </div>
       </div>
       <div className={styles.container}>
         <Image className={styles.image} src={espace} alt="espace" fill />
         <div className={styles.paragraph}>
-          Issu d'un parcours attypique, j'ai tout de suite été tres attiré par
-          le design et particulièrement le design d'
-          <div className={`${styles.secondary} ${playfair_display.className}`}>
-            espace
+          <div>
+            Issu d'un parcours attypique, j'ai tout de suite été tres attiré par
+            le design et particulièrement le design d'
+            <div
+              className={`${styles.secondary} ${playfair_display.className}`}
+            >
+              espace
+            </div>
+            .
           </div>
-          .
         </div>
       </div>
       <div className={styles.container}>
         <Image className={styles.image} src={spectacle} alt="spectacle" fill />
         <div className={styles.paragraph}>
-          Ni trouvant pas assez de fantaisie j'ai commencé à étudier les arts du{' '}
-          <div className={`${styles.primary} ${playfair_display.className}`}>
-            spectacle
+          <div>
+            Ni trouvant pas assez de fantaisie j'ai commencé à étudier les arts
+            du{' '}
+            <div className={`${styles.primary} ${playfair_display.className}`}>
+              spectacle
+            </div>
+            , théatre et cinéma.
           </div>
-          , théatre et cinéma.
         </div>
       </div>
       <div className={styles.container}>
         <Image className={styles.image} src={concert} alt="concert" fill />
         <div className={styles.paragraph}>
-          C'est la que la musique est entré dans ma vie, j'ai alors étudié la
-          sonorisation de spectacles vivants, et notamment de{' '}
-          <div className={`${styles.secondary} ${playfair_display.className}`}>
-            concerts
+          <div>
+            C'est la que la musique est entré dans ma vie, j'ai alors étudié la
+            sonorisation de spectacles vivants, et notamment de{' '}
+            <div
+              className={`${styles.secondary} ${playfair_display.className}`}
+            >
+              concerts
+            </div>
+            .
           </div>
-          .
         </div>
       </div>
       <div className={styles.container}>
         <Image className={styles.image} src={developer} alt="developer" fill />
         <div className={styles.paragraph}>
-          Prenant gout au défi technique, je me suis découvert une passion pour
-          le développement web, et spécialement le{' '}
-          <div className={`${styles.primary} ${playfair_display.className}`}>
-            front-end
-          </div>{' '}
-          pour ce savant mélange entre techniques et artistiques.
+          <div>
+            Prenant gout au défi technique, je me suis découvert une passion
+            pour le développement web, et spécialement le{' '}
+            <div className={`${styles.primary} ${playfair_display.className}`}>
+              front-end
+            </div>{' '}
+            pour ce savant mélange entre techniques et artistiques.
+          </div>
         </div>
       </div>
       <div className={styles.container}>

@@ -14,7 +14,6 @@
 .moonWrapper {
   /* background-color: green; */
   position: absolute;
-  z-index: -2000;
   opacity: 0.2;
   left: 62vw;
   top: 10vh;
@@ -32,7 +31,6 @@
 }
 
 .moon {
-  z-index: -1000;
   /* filter: grayscale(100); */
   /* transform: translateY(0); */
   /* animation: moon 2s linear forwards; */
@@ -101,7 +99,6 @@
 
 .hi {
   position: relative;
-  z-index: -1;
   color: var(--second-highlight);
   display: inline-block;
   font-size: 9rem;
@@ -122,7 +119,6 @@
 .name {
   position: relative;
   display: inline-block;
-  z-index: -1;
   font-size: 5rem;
   font-weight: 900;
   animation: name linear;
@@ -178,9 +174,9 @@
 }
 
 .image {
-  z-index: -10;
   opacity: 0.5;
   object-fit: cover;
+  pointer-events: none;
   object-position: 50% 100%;
   filter: grayscale(100%);
   /* mask-image: radial-gradient(black 0%, transparent 70%); */
@@ -197,17 +193,40 @@
 
 .paragraph {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   backdrop-filter: blur(10px) brightness(0.85);
   /* background-color: var(--secondary-dark); */
   /* backdrop-filter: opacity(0.2); */
-  border-radius: 1.5em;
+  border-radius: 0.5em;
   padding: 1em;
-  z-index: -1;
   right: 10vw;
   bottom: 50vh;
   max-width: 30vw;
   font-size: 1.5rem;
   line-height: 2;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  /* bottom: 50vh; */
+  /* left: 10vw; */
+  /* color: var(--second-highlight); */
+  color: var(--secondary-dark);
+  /* background-clip: text; */
+  background-color: var(--main-highlight);
+  /* backdrop-filter: blur(10px) brightness(0.85); */
+  border-radius: 0.5em;
+  /* padding: 0.2em; */
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: var(--secondary-dark);
+  }
 }
 
 @keyframes text {
